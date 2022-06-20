@@ -76,7 +76,9 @@ nav ul li{
     border: solid;
 }
 
-
+.bg-nav{
+    background-color: orange;
+}
 
 .laFugaImg{
     display: none;
@@ -412,4 +414,8 @@ header nav ul{
 .igIntegrantes{
     height: 50px;
     width: 50px;
+}
+
+.bg-p{
+    background-color: orange;
 }
