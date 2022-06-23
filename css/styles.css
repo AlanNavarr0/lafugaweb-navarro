@@ -1,421 +1,321 @@
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-}
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box; }
 
 /* Home */
+header h1 {
+  background-color: orange;
+  text-align: start;
+  font-size: 50px;
+  font-weight: lighter;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; }
 
-header h1{
-    background-color: orange;
-    text-align: start;
-    font-size: 50px;
-    font-weight: lighter;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
+.fotoBanda {
+  width: 90%; }
 
-.fotoBanda{
-    width: 90%;
-}
+.banda {
+  display: flex;
+  justify-content: center;
+  background-color: orange;
+  grid-area: banda; }
 
-.banda{
-    display: flex;
-    justify-content: center;
-    background-color: orange;
-    grid-area: banda;
-}
+.seguinosFondo {
+  background-color: grey;
+  grid-area: seguinosFondo; }
 
-.seguinosFondo{
-    background-color: grey;
-    grid-area: seguinosFondo;
-}
+.redes {
+  height: 25px;
+  width: 25px;
+  background-color: grey; }
 
-.redes{
-    height: 25px;
-    width: 25px;
-    background-color: grey;
-}
+.fb {
+  height: 25px;
+  width: 25px; }
 
-.fb{
-    height: 25px;
-    width: 25px;
-}
-.ig{
-    height: 25px;
-    width: 25px;
-}
-.yt{
-    height: 25px;
-    width: 25px;
-}
+.ig {
+  height: 25px;
+  width: 25px; }
 
-.parrafoHome{
-    margin-top: 1rem;
-    background-color: grey;
-    font-size: larger;
-    grid-area: parrafoHome;
+.yt {
+  height: 25px;
+  width: 25px; }
 
-}
+.parrafoHome {
+  margin-top: 1rem;
+  background-color: grey;
+  font-size: larger;
+  grid-area: parrafoHome; }
 
-.fondoNav{
-    background-color: grey;
-}
+.fondoNav {
+  background-color: grey; }
 
+/*Modificacion scss*/
 nav ul {
-    display: flex;
-    justify-content: space-evenly;
-}
-
-nav ul li{
+  display: flex;
+  justify-content: space-evenly; }
+  nav ul li {
     list-style: none;
-    padding: 0.4rem;;
+    padding: 0.4rem;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     background-size: cover;
     background-color: orange;
     border-radius: 1.5rem;
-    border: solid;
-}
+    border: solid; }
 
-.bg-nav{
-    background-color: orange;
-}
+.bg-nav {
+  background-color: orange; }
 
-.laFugaImg{
-    display: none;
-    grid-area: laFugaImg;
-}
+.laFugaImg {
+  display: none;
+  grid-area: laFugaImg; }
 
-.logo{
-    animation-name: logolafuga;
-    animation-iteration-count: infinite;
-    animation-duration: 90s;
-    border-radius: 4rem;
-    height: 8rem;
-    width: 8rem;
-    margin: 1rem;
-}
+.logo {
+  animation-name: logolafuga;
+  animation-iteration-count: infinite;
+  animation-duration: 90s;
+  border-radius: 4rem;
+  height: 8rem;
+  width: 8rem;
+  margin: 1rem; }
 
-@keyframes logolafuga{
-    from{
-        transform: rotate (0);
-    }
+@keyframes logolafuga {
+  from {
+    transform: rotate 0; }
+  to {
+    transform: rotate(360deg); } }
 
-    to{
-        transform: rotate(360deg);
-    }
-}
+footer h2 {
+  margin-top: 1rem;
+  text-decoration: underline;
+  text-align: center;
+  font-size: small; }
 
-footer h2{
-    margin-top: 1rem;
-    text-decoration: underline;
-    text-align: center;
-    font-size: small;
-}
+.seguinosFondo {
+  display: flex;
+  justify-content: center; }
 
-.seguinosFondo{
+.home {
+  display: grid;
+  grid-template-areas: "seguinosFondo seguinosFondo seguinosFondo seguinosFondo" "laFugaImg laFugaImg laFugaImg laFugaImg" "banda banda banda banda" "parrafoHome parrafoHome parrafoHome parrafoHome"; }
+
+@media screen and (min-width: 600px) {
+  header h1 {
+    text-align: center; }
+  .seguinosFondo {
+    display: block; } }
+
+@media screen and (min-width: 1024px) {
+  .laFugaImg {
     display: flex;
-    justify-content: center;
-}
-
-.home{
-    display: grid;
-    grid-template-areas: "seguinosFondo seguinosFondo seguinosFondo seguinosFondo"
-                        "laFugaImg laFugaImg laFugaImg laFugaImg"
-                         "banda banda banda banda"
-                         "parrafoHome parrafoHome parrafoHome parrafoHome";
-    
-}
-
-@media screen and (min-width:600px) {
-
-    header h1{
-        text-align: center;
-    }
-
-    .seguinosFondo{
-       display: block;
-    }
-
-}
-
-@media screen and (min-width:1024px) {
-    .laFugaImg{
-        display: flex;
-        justify-content: center;
-    }
-}
+    justify-content: center; } }
 
 /* Contacto */
-.h2Contacto{
-    background-color: orange;
-    text-align: center;
-}
+.h2Contacto {
+  background-color: orange;
+  text-align: center; }
 
-header nav ul{
-    display: none;
-    background-color: orange;
-}
+header nav ul {
+  display: none;
+  background-color: orange; }
 
-.contacto p{
-    margin-bottom: 1.5rem;
-}
+.contacto p {
+  margin-bottom: 1.5rem; }
 
-.inbox{
-    height: 50px;
-    width: 50px;
-}
-.wsp{    
-    height: 50px;
-    width: 50px;
-}
-.fbContacto{
-    height: 50px;
-    width: 50px;
-}
-.igContacto{
-    height: 50px;
-    width: 50px;
-}
-.ytContacto{
-    height: 50px;
-    width: 50px;
-}
+.inbox {
+  height: 50px;
+  width: 50px; }
 
-.formulario{
-    margin-bottom: 1.5rem;
-    background-color: grey;
-}
+.wsp {
+  height: 50px;
+  width: 50px; }
 
-.inboxContacto{
+.fbContacto {
+  height: 50px;
+  width: 50px; }
+
+.igContacto {
+  height: 50px;
+  width: 50px; }
+
+.ytContacto {
+  height: 50px;
+  width: 50px; }
+
+.formulario {
+  margin-bottom: 1.5rem;
+  background-color: grey; }
+
+.inboxContacto {
+  display: flex;
+  justify-content: center; }
+
+.redesContacto {
+  display: flex;
+  justify-content: center; }
+
+.contacto {
+  display: grid;
+  grid-template-areas: "parrafosContacto parrafosContacto parrafosContacto parrafosContacto" "inboxContacto inboxContacto inboxcontacto inboxContacto" "redesContacto redesContacto redesContacto redesContacto";
+  justify-content: center;
+  gap: 2rem; }
+
+@media screen and (min-width: 600px) {
+  header h1 {
+    text-align: center; } }
+
+@media screen and (min-width: 1024px) {
+  header nav ul {
     display: flex;
-    justify-content: center;
-}
-
-.redesContacto{
-    display: flex;
-    justify-content: center;
-}
-
-.contacto{
-    display: grid;
-    grid-template-areas: "parrafosContacto parrafosContacto parrafosContacto parrafosContacto"
-                        "inboxContacto inboxContacto inboxcontacto inboxContacto"
-                        "redesContacto redesContacto redesContacto redesContacto";
-    justify-content: center;
-    gap: 2rem;
-}
-
-@media screen and (min-width:600px) {
-    header h1{
-        text-align: center;
-    }
-}
-
-@media screen and (min-width:1024px) {
-    header nav ul{
-        display: flex;
-        justify-content: space-evenly;
-    }
-}
-
+    justify-content: space-evenly; } }
 
 /*Discos*/
+.ilusion {
+  height: 10rem;
+  width: 10rem; }
 
-.ilusion{
-    height: 10rem;
-    width: 10rem;
-}
+.poresa {
+  height: 10rem;
+  width: 10rem; }
 
-.poresa{
-    height: 10rem;
-    width: 10rem;
-}
+.hijos {
+  height: 10rem;
+  width: 10rem; }
 
-.hijos{
-    height: 10rem;
-    width: 10rem;
-}
+.ytDiscos {
+  height: 50px;
+  width: 50px; }
 
-.ytDiscos{
-    height: 50px;
-    width: 50px;
-}
+.pDiscos {
+  grid-area: pDiscos; }
 
-.pDiscos{
-    grid-area: pDiscos;
-}
-.tapaDiscos1{
-    grid-area: tapaDiscos1;
-}
+.tapaDiscos1 {
+  grid-area: tapaDiscos1; }
 
-.tapaDiscos2{
-    grid-area: tapaDiscos2;
-}
+.tapaDiscos2 {
+  grid-area: tapaDiscos2; }
 
-.tapaDiscos3{
-    grid-area: tapaDiscos3;
-}
+.tapaDiscos3 {
+  grid-area: tapaDiscos3; }
 
-.listaDiscos1{
-    margin-top: 1rem;
-    grid-area: listaDiscos1;
-}
+.listaDiscos1 {
+  margin-top: 1rem;
+  grid-area: listaDiscos1; }
 
+.listaDiscos2 {
+  margin-top: 1rem;
+  grid-area: listaDiscos2; }
 
-.listaDiscos2{
-    margin-top: 1rem;
-    grid-area: listaDiscos2;
-}
+.listaDiscos3 {
+  margin-top: 1rem;
+  grid-area: listaDiscos3; }
 
-.listaDiscos3{
-    margin-top: 1rem;
-    grid-area: listaDiscos3;
-}
+.titulo1 {
+  background-color: orange; }
 
-.titulo1{
-    background-color: orange;
-}
+.titulo2 {
+  background-color: orange; }
 
-.titulo2{
-    background-color: orange;
-}
+.titulo3 {
+  background-color: orange; }
 
-.titulo3{
-    background-color: orange;
-}
+@media screen and (min-width: 600px) {
+  .discos {
+    display: grid;
+    grid-template-areas: "pDiscos pDiscos" "tapaDiscos1 listaDiscos1" "tapaDiscos2 listaDiscos2" "tapaDiscos3 listaDiscos3";
+    gap: 2rem; } }
 
-@media screen and (min-width:600px) {
-    .discos{
-        display: grid;
-        grid-template-areas:"pDiscos pDiscos"
-                            "tapaDiscos1 listaDiscos1"
-                            "tapaDiscos2 listaDiscos2"
-                            "tapaDiscos3 listaDiscos3";
-        gap: 2rem;
-    }
-}
-
-@media screen and (min-width:600px) {
-    .discos{
-        display: grid;
-        grid-template-areas:"pDiscos pDiscos pDiscos pDiscos"
-                            "tapaDiscos1 tapaDiscos1 listaDiscos1 listaDiscos1"
-                            "tapaDiscos2 tapaDiscos2 listaDiscos2 listaDiscos2"
-                            "tapaDiscos3 tapaDiscos3 listaDiscos3 listaDiscos3";
-        gap: 2rem;
-    }
-}
-
-
+@media screen and (min-width: 600px) {
+  .discos {
+    display: grid;
+    grid-template-areas: "pDiscos pDiscos pDiscos pDiscos" "tapaDiscos1 tapaDiscos1 listaDiscos1 listaDiscos1" "tapaDiscos2 tapaDiscos2 listaDiscos2 listaDiscos2" "tapaDiscos3 tapaDiscos3 listaDiscos3 listaDiscos3";
+    gap: 2rem; } }
 
 /*Shows*/
-.flyerP1{
-    text-align: center;
-    background-color: orange;
-    margin-top: 0.5rem;
-}
-.flyerP2{
-    text-align: center;
-    background-color: orange;
-    margin-top: 0.5rem;
-}
-.flyer1{
-    height: 400px;
-    width: 250px;
-}
-.flyer2{
-    height: 400px;
-    width: 250px;
-}
+.flyerP1 {
+  text-align: center;
+  background-color: orange;
+  margin-top: 0.5rem; }
 
-.flyerP3{
-    text-align: center;
-    background-color: orange;
-    margin-top: 0.5rem;
-}
-.flyerP4{
-    text-align: center;
-    background-color: orange;
-    margin-top: 0.5rem;
-}
-.flyer3{
-    height: 400px;
-    width: 250px;
-}
-.flyer4{
-    height: 400px;
-    width: 250px;
-}
+.flyerP2 {
+  text-align: center;
+  background-color: orange;
+  margin-top: 0.5rem; }
 
-.show1{
-    grid-area: show1;
-}
+.flyer1 {
+  height: 400px;
+  width: 250px; }
 
-.show2{
-    grid-area: show2;
-}
+.flyer2 {
+  height: 400px;
+  width: 250px; }
 
-.show3{
-    grid-area: show3;
-}
+.flyerP3 {
+  text-align: center;
+  background-color: orange;
+  margin-top: 0.5rem; }
 
-.show4{
-    grid-area: show4;
-}
+.flyerP4 {
+  text-align: center;
+  background-color: orange;
+  margin-top: 0.5rem; }
 
-@media screen and (min-width:600px) {
-    .mShows{
-        display: grid;
-        grid-template-areas:"show1 show2"
-                            "show1 show2"
-                            "show3 show4"
-                            "show3 show4";
-        gap: 2rem;
-        
-    }
-}
+.flyer3 {
+  height: 400px;
+  width: 250px; }
 
-@media screen and (min-width:1024px) {
-    .mShows{
-        display: grid;
-        grid-template-areas:"show1 show2 show3 show4"
-                            "show1 show2 show3 show4"
-                            "show1 show2 show3 show4"
-                            "show1 show2 show3 show4";
-        gap: 2rem;
-        
-    }
-}
+.flyer4 {
+  height: 400px;
+  width: 250px; }
+
+.show1 {
+  grid-area: show1; }
+
+.show2 {
+  grid-area: show2; }
+
+.show3 {
+  grid-area: show3; }
+
+.show4 {
+  grid-area: show4; }
+
+@media screen and (min-width: 600px) {
+  .mShows {
+    display: grid;
+    grid-template-areas: "show1 show2" "show1 show2" "show3 show4" "show3 show4";
+    gap: 2rem; } }
+
+@media screen and (min-width: 1024px) {
+  .mShows {
+    display: grid;
+    grid-template-areas: "show1 show2 show3 show4" "show1 show2 show3 show4" "show1 show2 show3 show4" "show1 show2 show3 show4";
+    gap: 2rem; } }
 
 /*Integrantes*/
+.kero {
+  height: 400px;
+  width: 250px; }
 
-.kero{
-    height: 400px;
-    width: 250px;
-}
+.david {
+  height: 400px;
+  width: 250px; }
 
-.david{
-    height: 400px;
-    width: 250px;
-}
-.daro{
-    height: 400px;
-    width: 250px;
-}
-.nava{
-    height: 400px;
-    width: 250px;
-}
+.daro {
+  height: 400px;
+  width: 250px; }
 
-.fbIntegrantes{
-    height: 50px;
-    width: 50px;
-}
-.igIntegrantes{
-    height: 50px;
-    width: 50px;
-}
+.nava {
+  height: 400px;
+  width: 250px; }
 
-.bg-p{
-    background-color: orange;
-}
+.fbIntegrantes {
+  height: 50px;
+  width: 50px; }
+
+.igIntegrantes {
+  height: 50px;
+  width: 50px; }
+
+.bg-p {
+  background-color: orange; }
