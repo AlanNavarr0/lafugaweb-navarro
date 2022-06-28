@@ -3,11 +3,40 @@
     padding: 0px;
     box-sizing: border-box;
 }
+//Variables
+$color-principal: orange;
+$medida-cuadrada: 50px;
+
+/*Mixin en imagenes de Integrantes, flyers*/
+@mixin sizes($height, $width){
+    height: $height;
+    width: $width;
+}
+
+//Extend flex
+%flex{
+    display: flex;
+    justify-content: center;
+}
+
+/*Extend para ban de carrousel*/
+%ban{
+    display: inline-block;
+    background-color: $color-principal;
+    width: 250px;
+}
 
 /* Home */
+body{
+    background-color: grey;
+}
+
+.subtituloHome{
+    text-align: center;
+}
 
 header h1{
-    background-color: orange;
+    background-color: $color-principal;
     text-align: start;
     font-size: 50px;
     font-weight: lighter;
@@ -19,42 +48,32 @@ header h1{
 }
 
 .banda{
-    display: flex;
-    justify-content: center;
-    background-color: orange;
+    @extend %flex;
+    background-color: $color-principal;
     grid-area: banda;
 }
 
 .seguinosFondo{
+    @extend %flex;
     background-color: grey;
     grid-area: seguinosFondo;
 }
 
-.redes{
-    height: 25px;
-    width: 25px;
-    background-color: grey;
+//Mixin
+.redes .fb .ig .yt{
+    @include sizes (25px, 25px)
 }
 
-.fb{
-    height: 25px;
-    width: 25px;
-}
-.ig{
-    height: 25px;
-    width: 25px;
-}
-.yt{
-    height: 25px;
-    width: 25px;
+.redes{
+    background-color: grey;
 }
 
 .parrafoHome{
-    margin-top: 1rem;
+    text-align: center;
+    padding: 2%;
     background-color: grey;
     font-size: larger;
     grid-area: parrafoHome;
-
 }
 
 .fondoNav{
@@ -70,29 +89,24 @@ nav ul {
         padding: 0.4rem;;
         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
         background-size: cover;
-        background-color: orange;
+        background-color: $color-principal;
         border-radius: 1.5rem;
         border: solid;
     }
 }
 
 .bg-nav{
-    background-color: orange;
+    background-color: $color-principal;
 }
 
-.laFugaImg{
-    display: none;
-    grid-area: laFugaImg;
-}
 
 .logo{
     animation-name: logolafuga;
     animation-iteration-count: infinite;
     animation-duration: 90s;
     border-radius: 4rem;
-    height: 8rem;
-    width: 8rem;
-    margin: 1rem;
+    height: 5rem;
+    width: 5rem;
 }
 
 @keyframes logolafuga{
@@ -112,23 +126,17 @@ footer h2{
     font-size: small;
 }
 
-.seguinosFondo{
-    display: flex;
-    justify-content: center;
-}
-
 .home{
     display: grid;
     grid-template-areas: "seguinosFondo seguinosFondo seguinosFondo seguinosFondo"
-                        "laFugaImg laFugaImg laFugaImg laFugaImg"
-                         "banda banda banda banda"
-                         "parrafoHome parrafoHome parrafoHome parrafoHome";
-    
+                         "parrafoHome parrafoHome parrafoHome parrafoHome"
+                         "banda banda banda banda"; 
 }
 
 @media screen and (min-width:600px) {
 
     header h1{
+        display: block;
         text-align: center;
     }
 
@@ -139,30 +147,45 @@ footer h2{
 }
 
 @media screen and (min-width:1024px) {
-    .laFugaImg{
-        display: flex;
-        justify-content: center;
+    header h1{
+        display: block;
+        text-align: end;
     }
 }
 
 /* Contacto */
 .h2Contacto{
-    background-color: orange;
+    background-color: $color-principal;
     text-align: center;
 }
 
 header nav ul{
     display: none;
-    background-color: orange;
+    background-color: $color-principal;
 }
 
 .contacto p{
     margin-bottom: 1.5rem;
 }
 
+
+.inboxContacto{
+    @extend %flex;
+}
+
+.redesContacto{
+    @extend %flex;
+}
+
+
+//Mixin
+.inbox .wsp .fbContacto .igContacto .ytContacto{
+    @include sizes (50px, 50px)
+}
+
 .inbox{
-    height: 50px;
-    width: 50px;
+    height: $medida-cuadrada;
+    width: $medida-cuadrada;
 }
 .wsp{    
     height: 50px;
@@ -184,16 +207,6 @@ header nav ul{
 .formulario{
     margin-bottom: 1.5rem;
     background-color: grey;
-}
-
-.inboxContacto{
-    display: flex;
-    justify-content: center;
-}
-
-.redesContacto{
-    display: flex;
-    justify-content: center;
 }
 
 .contacto{
@@ -236,6 +249,12 @@ header nav ul{
     width: 10rem;
 }
 
+//mixin
+
+.ilusion .poresa .hijos{
+    @include sizes (10rem, 10rem)
+}
+
 .ytDiscos{
     height: 50px;
     width: 50px;
@@ -273,15 +292,15 @@ header nav ul{
 }
 
 .titulo1{
-    background-color: orange;
+    background-color: $color-principal;
 }
 
 .titulo2{
-    background-color: orange;
+    background-color: $color-principal;
 }
 
 .titulo3{
-    background-color: orange;
+    background-color: $color-principal;
 }
 
 @media screen and (min-width:600px) {
@@ -311,14 +330,21 @@ header nav ul{
 /*Shows*/
 .flyerP1{
     text-align: center;
-    background-color: orange;
+    background-color: $color-principal;
     margin-top: 0.5rem;
 }
 .flyerP2{
     text-align: center;
-    background-color: orange;
+    background-color: $color-principal;
     margin-top: 0.5rem;
 }
+
+//mixin
+
+.flyer1 .flyer2 .flyer3 .flyer4{
+    @include sizes (400px, 250px)
+}
+
 .flyer1{
     height: 400px;
     width: 250px;
@@ -328,16 +354,6 @@ header nav ul{
     width: 250px;
 }
 
-.flyerP3{
-    text-align: center;
-    background-color: orange;
-    margin-top: 0.5rem;
-}
-.flyerP4{
-    text-align: center;
-    background-color: orange;
-    margin-top: 0.5rem;
-}
 .flyer3{
     height: 400px;
     width: 250px;
@@ -345,6 +361,18 @@ header nav ul{
 .flyer4{
     height: 400px;
     width: 250px;
+}
+
+.flyerP3{
+    text-align: center;
+    background-color: $color-principal;
+    margin-top: 0.5rem;
+}
+
+.flyerP4{
+    text-align: center;
+    background-color: $color-principal;
+    margin-top: 0.5rem;
 }
 
 .show1{
@@ -389,23 +417,11 @@ header nav ul{
 
 /*Integrantes*/
 
-.kero{
-    height: 400px;
-    width: 250px;
+/*Mixin en imagenes de Integrantes*/
+.kero .david .nava .daro{
+    @include sizes (400px, 250px)
 }
 
-.david{
-    height: 400px;
-    width: 250px;
-}
-.daro{
-    height: 400px;
-    width: 250px;
-}
-.nava{
-    height: 400px;
-    width: 250px;
-}
 
 .fbIntegrantes{
     height: 50px;
@@ -416,8 +432,9 @@ header nav ul{
     width: 50px;
 }
 
+//Extend
 .bg-p{
-    background-color: orange;
+    @extend %ban
 }
 
 

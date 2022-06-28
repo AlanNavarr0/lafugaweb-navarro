@@ -3,7 +3,24 @@
   padding: 0px;
   box-sizing: border-box; }
 
+/*Mixin en imagenes de Integrantes, flyers*/
+.banda, .seguinosFondo, .inboxContacto, .redesContacto {
+  display: flex;
+  justify-content: center; }
+
+/*Extend para ban de carrousel*/
+.bg-p {
+  display: inline-block;
+  background-color: orange;
+  width: 250px; }
+
 /* Home */
+body {
+  background-color: grey; }
+
+.subtituloHome {
+  text-align: center; }
+
 header h1 {
   background-color: orange;
   text-align: start;
@@ -15,8 +32,6 @@ header h1 {
   width: 90%; }
 
 .banda {
-  display: flex;
-  justify-content: center;
   background-color: orange;
   grid-area: banda; }
 
@@ -24,25 +39,16 @@ header h1 {
   background-color: grey;
   grid-area: seguinosFondo; }
 
-.redes {
+.redes .fb .ig .yt {
   height: 25px;
-  width: 25px;
+  width: 25px; }
+
+.redes {
   background-color: grey; }
 
-.fb {
-  height: 25px;
-  width: 25px; }
-
-.ig {
-  height: 25px;
-  width: 25px; }
-
-.yt {
-  height: 25px;
-  width: 25px; }
-
 .parrafoHome {
-  margin-top: 1rem;
+  text-align: center;
+  padding: 2%;
   background-color: grey;
   font-size: larger;
   grid-area: parrafoHome; }
@@ -66,18 +72,13 @@ nav ul {
 .bg-nav {
   background-color: orange; }
 
-.laFugaImg {
-  display: none;
-  grid-area: laFugaImg; }
-
 .logo {
   animation-name: logolafuga;
   animation-iteration-count: infinite;
   animation-duration: 90s;
   border-radius: 4rem;
-  height: 8rem;
-  width: 8rem;
-  margin: 1rem; }
+  height: 5rem;
+  width: 5rem; }
 
 @keyframes logolafuga {
   from {
@@ -91,24 +92,21 @@ footer h2 {
   text-align: center;
   font-size: small; }
 
-.seguinosFondo {
-  display: flex;
-  justify-content: center; }
-
 .home {
   display: grid;
-  grid-template-areas: "seguinosFondo seguinosFondo seguinosFondo seguinosFondo" "laFugaImg laFugaImg laFugaImg laFugaImg" "banda banda banda banda" "parrafoHome parrafoHome parrafoHome parrafoHome"; }
+  grid-template-areas: "seguinosFondo seguinosFondo seguinosFondo seguinosFondo" "parrafoHome parrafoHome parrafoHome parrafoHome" "banda banda banda banda"; }
 
 @media screen and (min-width: 600px) {
   header h1 {
+    display: block;
     text-align: center; }
   .seguinosFondo {
     display: block; } }
 
 @media screen and (min-width: 1024px) {
-  .laFugaImg {
-    display: flex;
-    justify-content: center; } }
+  header h1 {
+    display: block;
+    text-align: end; } }
 
 /* Contacto */
 .h2Contacto {
@@ -121,6 +119,10 @@ header nav ul {
 
 .contacto p {
   margin-bottom: 1.5rem; }
+
+.inbox .wsp .fbContacto .igContacto .ytContacto {
+  height: 50px;
+  width: 50px; }
 
 .inbox {
   height: 50px;
@@ -145,14 +147,6 @@ header nav ul {
 .formulario {
   margin-bottom: 1.5rem;
   background-color: grey; }
-
-.inboxContacto {
-  display: flex;
-  justify-content: center; }
-
-.redesContacto {
-  display: flex;
-  justify-content: center; }
 
 .contacto {
   display: grid;
@@ -179,6 +173,10 @@ header nav ul {
   width: 10rem; }
 
 .hijos {
+  height: 10rem;
+  width: 10rem; }
+
+.ilusion .poresa .hijos {
   height: 10rem;
   width: 10rem; }
 
@@ -242,11 +240,23 @@ header nav ul {
   background-color: orange;
   margin-top: 0.5rem; }
 
+.flyer1 .flyer2 .flyer3 .flyer4 {
+  height: 400px;
+  width: 250px; }
+
 .flyer1 {
   height: 400px;
   width: 250px; }
 
 .flyer2 {
+  height: 400px;
+  width: 250px; }
+
+.flyer3 {
+  height: 400px;
+  width: 250px; }
+
+.flyer4 {
   height: 400px;
   width: 250px; }
 
@@ -259,14 +269,6 @@ header nav ul {
   text-align: center;
   background-color: orange;
   margin-top: 0.5rem; }
-
-.flyer3 {
-  height: 400px;
-  width: 250px; }
-
-.flyer4 {
-  height: 400px;
-  width: 250px; }
 
 .show1 {
   grid-area: show1; }
@@ -293,19 +295,8 @@ header nav ul {
     gap: 2rem; } }
 
 /*Integrantes*/
-.kero {
-  height: 400px;
-  width: 250px; }
-
-.david {
-  height: 400px;
-  width: 250px; }
-
-.daro {
-  height: 400px;
-  width: 250px; }
-
-.nava {
+/*Mixin en imagenes de Integrantes*/
+.kero .david .nava .daro {
   height: 400px;
   width: 250px; }
 
@@ -316,6 +307,3 @@ header nav ul {
 .igIntegrantes {
   height: 50px;
   width: 50px; }
-
-.bg-p {
-  background-color: orange; }
