@@ -44,10 +44,12 @@ header h1{
 }
 
 .fotoBanda{
-    width: 90%;
+    width: 80%;
+    height: 100%;
 }
 
 .banda{
+    height: 60%;
     @extend %flex;
     background-color: $color-principal;
     grid-area: banda;
@@ -70,9 +72,9 @@ header h1{
 
 .parrafoHome{
     text-align: center;
-    padding: 2%;
+    margin: 1rem;
     background-color: grey;
-    font-size: larger;
+    font-size: 1.2rem;
     grid-area: parrafoHome;
 }
 
@@ -119,6 +121,7 @@ nav ul {
     }
 }
 
+
 footer h2{
     margin-top: 1rem;
     text-decoration: underline;
@@ -133,7 +136,15 @@ footer h2{
                          "banda banda banda banda"; 
 }
 
+
+
 @media screen and (min-width:600px) {
+
+    .home{
+        display: grid;
+        grid-template-areas: "seguinosFondo seguinosFondo parrafoHome parrafoHome"
+                             "banda banda banda banda"; 
+    }
 
     header h1{
         display: block;
@@ -147,6 +158,13 @@ footer h2{
 }
 
 @media screen and (min-width:1024px) {
+
+    .home{
+        display: grid;
+        grid-template-areas: "seguinosFondo seguinosFondo parrafoHome parrafoHome"
+                             "banda banda banda banda"; 
+    }
+
     header h1{
         display: block;
         text-align: end;
