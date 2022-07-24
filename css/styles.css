@@ -3,16 +3,20 @@
   padding: 0px;
   box-sizing: border-box; }
 
-/*Mixin en imagenes de Integrantes, flyers*/
+/* Parshal */
 .banda, .seguinosFondo, .inboxContacto, .redesContacto {
   display: flex;
   justify-content: center; }
 
-/*Extend para ban de carrousel*/
 .bg-p {
   display: inline-block;
   background-color: orange;
   width: 250px; }
+
+.flyerP1, .flyerP2, .flyerP3, .flyerP4, .musico1, .musico2, .musico3, .musico4 {
+  text-align: center;
+  background-color: orange;
+  margin-top: 0.5rem; }
 
 /* Home */
 body {
@@ -58,7 +62,7 @@ header h1 {
 .fondoNav {
   background-color: grey; }
 
-/*Modificacion scss*/
+/*Nestin*/
 nav ul {
   display: flex;
   justify-content: space-evenly; }
@@ -99,22 +103,22 @@ footer h2 {
   grid-template-areas: "seguinosFondo seguinosFondo seguinosFondo seguinosFondo" "parrafoHome parrafoHome parrafoHome parrafoHome" "banda banda banda banda"; }
 
 @media screen and (min-width: 600px) {
-  .home {
-    display: grid;
-    grid-template-areas: "seguinosFondo seguinosFondo parrafoHome parrafoHome" "banda banda banda banda"; }
   header h1 {
     display: block;
     text-align: center; }
   .seguinosFondo {
-    display: block; } }
+    display: block; }
+  .carousel-item {
+    padding-left: 25%;
+    padding-right: 25%; } }
 
 @media screen and (min-width: 1024px) {
-  .home {
-    display: grid;
-    grid-template-areas: "seguinosFondo seguinosFondo parrafoHome parrafoHome" "banda banda banda banda"; }
   header h1 {
     display: block;
-    text-align: end; } }
+    text-align: end; }
+  .carousel-item {
+    padding-left: 25%;
+    padding-right: 25%; } }
 
 /* Contacto */
 .h2Contacto {
@@ -153,8 +157,10 @@ header nav ul {
   width: 50px; }
 
 .formulario {
+  display: flex;
+  justify-content: center;
   margin-bottom: 1.5rem;
-  background-color: grey; }
+  background-color: black; }
 
 .contacto {
   display: grid;
@@ -181,10 +187,6 @@ header nav ul {
   width: 10rem; }
 
 .hijos {
-  height: 10rem;
-  width: 10rem; }
-
-.ilusion .poresa .hijos {
   height: 10rem;
   width: 10rem; }
 
@@ -238,20 +240,6 @@ header nav ul {
     gap: 2rem; } }
 
 /*Shows*/
-.flyerP1 {
-  text-align: center;
-  background-color: orange;
-  margin-top: 0.5rem; }
-
-.flyerP2 {
-  text-align: center;
-  background-color: orange;
-  margin-top: 0.5rem; }
-
-.flyer1 .flyer2 .flyer3 .flyer4 {
-  height: 400px;
-  width: 250px; }
-
 .flyer1 {
   height: 400px;
   width: 250px; }
@@ -267,16 +255,6 @@ header nav ul {
 .flyer4 {
   height: 400px;
   width: 250px; }
-
-.flyerP3 {
-  text-align: center;
-  background-color: orange;
-  margin-top: 0.5rem; }
-
-.flyerP4 {
-  text-align: center;
-  background-color: orange;
-  margin-top: 0.5rem; }
 
 .show1 {
   grid-area: show1; }
@@ -303,6 +281,34 @@ header nav ul {
     gap: 2rem; } }
 
 /*Integrantes*/
+.fMusico1 {
+  height: 400px;
+  width: 250px; }
+
+.fMusico2 {
+  height: 400px;
+  width: 250px; }
+
+.fMusico3 {
+  height: 400px;
+  width: 250px; }
+
+.fMusico4 {
+  height: 400px;
+  width: 250px; }
+
+@media screen and (min-width: 600px) {
+  .mInt {
+    display: grid;
+    grid-template-areas: "intKero intDavid" "intKero intDavid" "intDaro intNava" "intDaro intNava";
+    gap: 2rem; } }
+
+@media screen and (min-width: 1024px) {
+  .mInt {
+    display: grid;
+    grid-template-areas: "intKero intDavid intDaro intNava" "intKero intDavid intDaro intNava" "intKero intDavid intDaro intNava" "intKero intDavid intDaro intNava";
+    gap: 2rem; } }
+
 /*Mixin en imagenes de Integrantes*/
 .kero .david .nava .daro {
   height: 400px;

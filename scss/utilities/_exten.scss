@@ -1,0 +1,17 @@
+//Extend
+%flex{
+    display: flex;
+    justify-content: center;
+}
+
+%ban{
+    display: inline-block;
+    background-color: $color-principal;
+    width: 250px;
+}
+
+%tarjetas{
+    text-align: center;
+    background-color: $color-principal;
+    margin-top: 0.5rem;
+}

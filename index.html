@@ -48,18 +48,18 @@
     </header>
   </div>
 
-  <main class="home">
-
+  <main>
+    
     <div class="seguinosFondo">
       <h2>Seguinos en</h2>
       <a href="https://www.facebook.com/lafugaderock" target="_blank">
-      <img class="fbContacto" src="/img/facebook.png" alt="icono de facebook">
+      <img class="fbContacto" src="/img/facebook.svg" alt="icono de facebook">
       </a>
       <a href="https://www.instagram.com/lafuga.derock/?hl=es" target="_blank">
-      <img Class="igContacto" src="/img/instagram.png" alt="icono de instagram">        
+      <img Class="igContacto" src="/img/instagram.svg" alt="icono de instagram">        
       </a>
       <a href="https://www.youtube.com/channel/UCj4Su_ee4-0MoWuGtltkn8g/playlists" target="_blank">
-      <img class="ytContacto" src="/img/youtube.png" alt="icono de youtube">
+      <img class="ytContacto" src="/img/youtube.svg" alt="icono de youtube">
       </a>
     </div>
 
@@ -68,9 +68,43 @@
       <p>Nosotros somos La Fuga De Rock. Una banda oriunda de la zona Oeste de Buenos Aires. Acá te brindamos todo nuestro material de estudio para que puedas escucharlo, y toda la info sobre nuestra actividad. </p>
     </div>
 
-    <div class="banda">
-      <img class="fotoBanda" src="img/banda.jpg" alt="foto de la banda">
-    </div>
+      
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel" class="container-fluid">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="10000">
+          <img src="../img/carru.jpg" class="d-block w-100" alt="Integrantes de la banda">
+          <div class="carousel-caption d-md-block">
+          </div>
+          </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img src="../img/carru1.png" class="d-block w-100" alt="integrantes de la banda">
+          <div class="carousel-caption d-md-block">
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="../img/carru2.png" class="d-block w-100" alt="integrante de la banda">
+          <div class="carousel-caption d-md-block">
+          </div>
+        </div>
+
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+
+    </div>   
   </main>
 
   <footer>

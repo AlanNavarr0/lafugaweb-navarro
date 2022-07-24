@@ -3,28 +3,10 @@
     padding: 0px;
     box-sizing: border-box;
 }
-//Variables
-$color-principal: orange;
-$medida-cuadrada: 50px;
-
-/*Mixin en imagenes de Integrantes, flyers*/
-@mixin sizes($height, $width){
-    height: $height;
-    width: $width;
-}
-
-//Extend flex
-%flex{
-    display: flex;
-    justify-content: center;
-}
-
-/*Extend para ban de carrousel*/
-%ban{
-    display: inline-block;
-    background-color: $color-principal;
-    width: 250px;
-}
+/* Parshal */
+@import "utilities/variables";
+@import "utilities/exten";
+@import "utilities/mixin";
 
 /* Home */
 body{
@@ -82,7 +64,7 @@ header h1{
     background-color: grey;
 }
 
-/*Modificacion scss*/ 
+/*Nestin*/
 nav ul {
     display: flex;
     justify-content: space-evenly;
@@ -139,13 +121,6 @@ footer h2{
 
 
 @media screen and (min-width:600px) {
-
-    .home{
-        display: grid;
-        grid-template-areas: "seguinosFondo seguinosFondo parrafoHome parrafoHome"
-                             "banda banda banda banda"; 
-    }
-
     header h1{
         display: block;
         text-align: center;
@@ -155,23 +130,29 @@ footer h2{
        display: block;
     }
 
+    .carousel-item{
+        padding-left: 25%;
+        padding-right: 25%;
+    }
 }
 
 @media screen and (min-width:1024px) {
-
-    .home{
-        display: grid;
-        grid-template-areas: "seguinosFondo seguinosFondo parrafoHome parrafoHome"
-                             "banda banda banda banda"; 
-    }
-
     header h1{
         display: block;
         text-align: end;
     }
+
+    .carousel-item{
+        padding-left: 25%;
+        padding-right: 25%;
+    }
+
 }
 
 /* Contacto */
+
+
+
 .h2Contacto{
     background-color: $color-principal;
     text-align: center;
@@ -198,7 +179,7 @@ header nav ul{
 
 //Mixin
 .inbox .wsp .fbContacto .igContacto .ytContacto{
-    @include sizes (50px, 50px)
+    @include sizes(50px, 50px)
 }
 
 .inbox{
@@ -206,26 +187,30 @@ header nav ul{
     width: $medida-cuadrada;
 }
 .wsp{    
-    height: 50px;
-    width: 50px;
+    height: $medida-cuadrada;
+    width: $medida-cuadrada;
 }
 .fbContacto{
-    height: 50px;
-    width: 50px;
+    height: $medida-cuadrada;
+    width: $medida-cuadrada;
 }
 .igContacto{
-    height: 50px;
-    width: 50px;
+    height: $medida-cuadrada;
+    width: $medida-cuadrada;
 }
 .ytContacto{
-    height: 50px;
-    width: 50px;
+    height: $medida-cuadrada;
+    width: $medida-cuadrada;
 }
 
 .formulario{
+    display: flex;
+    justify-content: center;
     margin-bottom: 1.5rem;
-    background-color: grey;
+    background-color: black;
 }
+
+
 
 .contacto{
     display: grid;
@@ -253,29 +238,20 @@ header nav ul{
 /*Discos*/
 
 .ilusion{
-    height: 10rem;
-    width: 10rem;
+    @include sizes(10rem, 10rem);
 }
 
 .poresa{
-    height: 10rem;
-    width: 10rem;
+    @include sizes(10rem, 10rem);
 }
 
 .hijos{
-    height: 10rem;
-    width: 10rem;
-}
-
-//mixin
-
-.ilusion .poresa .hijos{
-    @include sizes (10rem, 10rem)
+    @include sizes(10rem, 10rem);
 }
 
 .ytDiscos{
-    height: 50px;
-    width: 50px;
+    height: $medida-cuadrada;
+    width: $medida-cuadrada;
 }
 
 .pDiscos{
@@ -347,50 +323,34 @@ header nav ul{
 
 /*Shows*/
 .flyerP1{
-    text-align: center;
-    background-color: $color-principal;
-    margin-top: 0.5rem;
+    @extend %tarjetas;
 }
+
 .flyerP2{
-    text-align: center;
-    background-color: $color-principal;
-    margin-top: 0.5rem;
-}
-
-//mixin
-
-.flyer1 .flyer2 .flyer3 .flyer4{
-    @include sizes (400px, 250px)
-}
-
-.flyer1{
-    height: 400px;
-    width: 250px;
-}
-.flyer2{
-    height: 400px;
-    width: 250px;
-}
-
-.flyer3{
-    height: 400px;
-    width: 250px;
-}
-.flyer4{
-    height: 400px;
-    width: 250px;
+    @extend %tarjetas;
 }
 
 .flyerP3{
-    text-align: center;
-    background-color: $color-principal;
-    margin-top: 0.5rem;
+    @extend %tarjetas;
 }
 
 .flyerP4{
-    text-align: center;
-    background-color: $color-principal;
-    margin-top: 0.5rem;
+    @extend %tarjetas;
+}
+
+//mixin
+.flyer1{
+    @include sizes(400px, 250px);
+}
+.flyer2{
+    @include sizes(400px, 250px);
+}
+
+.flyer3{
+    @include sizes(400px, 250px);
+}
+.flyer4{
+    @include sizes(400px, 250px);
 }
 
 .show1{
@@ -435,19 +395,70 @@ header nav ul{
 
 /*Integrantes*/
 
+.fMusico1{
+    @include sizes(400px, 250px);
+}
+.fMusico2{
+    @include sizes(400px, 250px);
+} 
+.fMusico3{
+    @include sizes(400px, 250px);
+}
+
+.fMusico4{
+    @include sizes(400px, 250px);
+}
+
+
+@media screen and (min-width:600px) {
+    .mInt{
+        display: grid;
+        grid-template-areas:"intKero intDavid"
+                            "intKero intDavid"
+                            "intDaro intNava"
+                            "intDaro intNava";
+        gap: 2rem;
+        
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .mInt{
+        display: grid;
+        grid-template-areas:"intKero intDavid intDaro intNava"
+                            "intKero intDavid intDaro intNava"
+                            "intKero intDavid intDaro intNava"
+                            "intKero intDavid intDaro intNava";
+        gap: 2rem;
+        
+    }
+}
+
 /*Mixin en imagenes de Integrantes*/
 .kero .david .nava .daro{
-    @include sizes (400px, 250px)
+    @include sizes (400px, 250px);
 }
 
+.musico1{
+    @extend %tarjetas
+}
+.musico2{
+    @extend %tarjetas
+}
+.musico3{
+    @extend %tarjetas
+}
+.musico4{
+    @extend %tarjetas
+}
 
 .fbIntegrantes{
-    height: 50px;
-    width: 50px;
+    height: $medida-cuadrada;
+    width: $medida-cuadrada;
 }
 .igIntegrantes{
-    height: 50px;
-    width: 50px;
+    height: $medida-cuadrada;
+    width: $medida-cuadrada;
 }
 
 //Extend
